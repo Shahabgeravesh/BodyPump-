@@ -241,6 +241,7 @@ button.ghost {
   background: #ffffff;
   border: 1px solid #e4e7ec;
   overflow: hidden;
+  overflow-x: auto;
 }
 
 .table-title {
@@ -467,5 +468,9 @@ button.ghost {
   .track-table td {
     padding: 8px 10px;
     font-size: 0.88rem;
+  }
+
+  .track-table table {
+    min-width: 520px;
   }
 }
