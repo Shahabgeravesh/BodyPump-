@@ -592,7 +592,6 @@ const data = [
 
 const programSelect = document.getElementById("programSelect");
 const releaseSelect = document.getElementById("releaseSelect");
-const searchInput = document.getElementById("searchInput");
 const countToggle = document.getElementById("countToggle");
 const simpleToggle = document.getElementById("simpleToggle");
 const trackGrid = document.getElementById("trackGrid");
@@ -627,8 +626,7 @@ const renderSummary = (release) => {
   `;
 };
 
-const renderTracks = (release, query) => {
-  const normalizedQuery = query.trim().toLowerCase();
+const renderTracks = (release) => {
   trackGrid.innerHTML = "";
 
   release.tracks.forEach((track) => {
@@ -646,7 +644,7 @@ const renderTracks = (release, query) => {
       .join(" ")
       .toLowerCase();
 
-    if (normalizedQuery && !searchableText.includes(normalizedQuery)) {
+    if (!searchableText) {
       return;
     }
 
@@ -713,20 +711,50 @@ const renderTracks = (release, query) => {
               : ""
           }
           <div class="track-table sequence-map">
-            <div class="table-title">Sequence Map</div>
+            <div class="table-title">Sequence Map (Counts)</div>
             <table>
               <thead>
                 <tr>
                   <th>#</th>
                   <th>Block / Move</th>
+                  <th>Counts</th>
                 </tr>
               </thead>
               <tbody>
                 ${track.sequence
-                  .map(
-                    (item, index) =>
-                      `<tr><td>${index + 1}</td><td>${item}</td></tr>`
-                  )
+                  .map((item, index) => {
+                    const rawMatches =
+                      item.match(
+                        /\b\d+\s*x\s*\d+\b|\b\d+\s*x\b|\bx\s*\d+\b|\b\d+\/\d+\b|\b\d+\s*cts?\b/gi
+                      ) || [];
+                    const formatCount = (value) => {
+                      const cleaned = value.replace(/\s+/g, "");
+                      if (/^\d+x\d+$/i.test(cleaned)) {
+                        const times = cleaned.split("x")[0];
+                        return `${cleaned} (${times} times)`;
+                      }
+                      if (/^\d+x$/i.test(cleaned)) {
+                        const times = cleaned.replace("x", "");
+                        return `${times} times`;
+                      }
+                      if (/^x\d+$/i.test(cleaned)) {
+                        const times = cleaned.replace("x", "");
+                        return `${times} times`;
+                      }
+                      if (/^\d+cts?$/i.test(cleaned)) {
+                        return cleaned.replace(/cts?/i, " counts");
+                      }
+                      return cleaned;
+                    };
+                    const counts = rawMatches.map(formatCount).join(", ");
+                    return `
+                      <tr>
+                        <td>${index + 1}</td>
+                        <td>${item}</td>
+                        <td><span class="count-pill">${counts || "—"}</span></td>
+                      </tr>
+                    `;
+                  })
                   .join("")}
               </tbody>
             </table>
@@ -795,7 +823,7 @@ const getActiveRelease = () => {
 const refreshRelease = () => {
   const release = getActiveRelease();
   renderSummary(release);
-  renderTracks(release, searchInput.value);
+  renderTracks(release);
 };
 
 programSelect.addEventListener("change", () => {
@@ -805,7 +833,6 @@ programSelect.addEventListener("change", () => {
 });
 
 releaseSelect.addEventListener("change", refreshRelease);
-searchInput.addEventListener("input", () => renderTracks(getActiveRelease(), searchInput.value));
 countToggle.addEventListener("change", updateCountVisibility);
 simpleToggle.addEventListener("change", updateSimpleMode);
 printButton.addEventListener("click", () => window.print());

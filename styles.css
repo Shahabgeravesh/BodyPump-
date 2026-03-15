@@ -265,6 +265,42 @@ button.ghost {
   vertical-align: top;
 }
 
+.sequence-map table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.sequence-map thead th {
+  border-top: none;
+  position: sticky;
+  top: 0;
+  background: #f9fafb;
+}
+
+.sequence-map tbody tr:hover td {
+  background: #f3f4f6;
+}
+
+.sequence-map td:first-child {
+  width: 40px;
+  color: #667085;
+  font-weight: 700;
+}
+
+.count-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #fff4cc;
+  border: 1px solid #f6d96b;
+  color: #0f172a;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  min-width: 64px;
+}
+
 .track-table thead th {
   font-size: 0.78rem;
   text-transform: uppercase;
@@ -397,12 +433,39 @@ button.ghost {
 
 .count {
   font-variant-numeric: tabular-nums;
-  color: #2b5cff;
+  color: #0f172a;
   font-weight: 700;
+  background: #fff4cc;
+  border: 1px solid #f6d96b;
+  padding: 2px 8px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 @media (max-width: 640px) {
   .controls {
     grid-template-columns: 1fr;
+  }
+
+  .track-card summary {
+    padding: 12px 14px;
+  }
+
+  .track-body {
+    padding: 0 14px 14px;
+  }
+
+  .track-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .track-table th,
+  .track-table td {
+    padding: 8px 10px;
+    font-size: 0.88rem;
   }
 }
