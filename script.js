@@ -594,6 +594,7 @@ const programSelect = document.getElementById("programSelect");
 const releaseSelect = document.getElementById("releaseSelect");
 const searchInput = document.getElementById("searchInput");
 const countToggle = document.getElementById("countToggle");
+const simpleToggle = document.getElementById("simpleToggle");
 const trackGrid = document.getElementById("trackGrid");
 const releaseSummary = document.getElementById("releaseSummary");
 const printButton = document.getElementById("printButton");
@@ -668,7 +669,7 @@ const renderTracks = (release, query) => {
           </div>
         </summary>
         <div class="track-body">
-          <div class="track-table">
+          <div class="track-table quick-stats">
             <div class="table-title">Quick Stats</div>
             <table>
               <tbody>
@@ -711,7 +712,7 @@ const renderTracks = (release, query) => {
           `
               : ""
           }
-          <div class="track-table">
+          <div class="track-table sequence-map">
             <div class="table-title">Sequence Map</div>
             <table>
               <thead>
@@ -730,7 +731,7 @@ const renderTracks = (release, query) => {
               </tbody>
             </table>
           </div>
-          <div class="track-table">
+          <div class="track-table coaching-cues">
             <div class="table-title">Coaching Cues</div>
             <table>
               <tbody>
@@ -776,6 +777,10 @@ const updateCountVisibility = () => {
   });
 };
 
+const updateSimpleMode = () => {
+  document.body.classList.toggle("simple-mode", simpleToggle.checked);
+};
+
 const setAllDetails = (isOpen) => {
   document.querySelectorAll("#trackGrid details").forEach((details) => {
     details.open = isOpen;
@@ -802,6 +807,7 @@ programSelect.addEventListener("change", () => {
 releaseSelect.addEventListener("change", refreshRelease);
 searchInput.addEventListener("input", () => renderTracks(getActiveRelease(), searchInput.value));
 countToggle.addEventListener("change", updateCountVisibility);
+simpleToggle.addEventListener("change", updateSimpleMode);
 printButton.addEventListener("click", () => window.print());
 expandAllButton.addEventListener("click", () => setAllDetails(true));
 collapseAllButton.addEventListener("click", () => setAllDetails(false));
@@ -809,3 +815,4 @@ collapseAllButton.addEventListener("click", () => setAllDetails(false));
 populateSelect(programSelect, data);
 populateSelect(releaseSelect, data[0].releases);
 refreshRelease();
+updateSimpleMode();

@@ -147,6 +147,10 @@ button.ghost {
   font-size: 0.95rem;
 }
 
+.simple-mode .tips-card {
+  display: none;
+}
+
 .summary-card h2 {
   margin-top: 0;
 }
@@ -367,6 +371,16 @@ button.ghost {
 
 .track-section .count {
   margin-top: 4px;
+}
+
+.simple-mode .round-table,
+.simple-mode .coaching-cues,
+.simple-mode .notes {
+  display: none;
+}
+
+.simple-mode .sequence-map tbody tr:nth-child(n + 4) {
+  display: none;
 }
 
 .notes textarea {
