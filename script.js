@@ -20,6 +20,17 @@ const data = [
             weights: "Light barbell",
             focus: "Full-body prep + range + posture",
             timing: "4/4, 3/1, 1/1/1/1, 2/2",
+            musicCues: [
+              "0:05 Intro - Set up",
+              "0:12 V1 - Deadlift 4/4",
+              "0:43 Ref - Deadrow 1/1/1/1",
+              "1:43 V2 - Clean & Press 2/2/2/2",
+              "2:14 O/H Press 2/2",
+              "2:45 V3 - Wide Squat 4/4",
+              "4:01 Lunge L",
+              "4:31 Lunge R",
+              "5:02 Outro - Bar down"
+            ],
             roundNotes: "Round 1 is the teaching round: set position + clean transitions before squats/lunges.",
             roundTips: [
               "Say the next move on the last 2 counts to lock transitions.",
@@ -48,6 +59,15 @@ const data = [
             weights: "Heavy barbell (new: light barbell)",
             focus: "Mid, wide, wider stance strength",
             timing: "4/4, 2/2, 1/1/2, bottom halves",
+            musicCues: [
+              "0:05 Intro - Set up mid stance",
+              "0:28 4/4 mid stance",
+              "1:26 2/2 mid stance",
+              "1:50 1/1/2 mid stance",
+              "2:01 Wide stance starts",
+              "3:34 Bottom halves",
+              "3:58 Wider stance (repeat block 2)"
+            ],
             roundNotes: "Round 1 mid stance. Round 2 wide stance. Round 3 wider stance (repeat block 2).",
             roundTips: [
               "Call the stance change 4 counts early.",
@@ -74,6 +94,15 @@ const data = [
             weights: "Medium-heavy barbell",
             focus: "Slow press + time under tension",
             timing: "2/2, staggered 2/2, bottom halves",
+            musicCues: [
+              "0:05 Intro - Set up",
+              "0:10 Chest Press 2/2",
+              "0:35 Staggered Press 2/2",
+              "0:50 Bottom halves",
+              "1:18 Hold",
+              "2:19 Recovery",
+              "2:27 Repeat block 1"
+            ],
             roundNotes: "Round 1 includes the hold after bottom halves; Round 2+ repeats the full block.",
             roundTips: [
               "Use the hold to reset shoulders and ribs.",
@@ -100,6 +129,18 @@ const data = [
             weights: "Medium-heavy barbell + optional extra plates",
             focus: "Posterior chain power + strong rows",
             timing: "4/4, 3/1, 1/1/1/1",
+            musicCues: [
+              "0:05 Intro - Set up",
+              "0:19 Deadlift 4/4",
+              "0:46 Deadrow 1/1/1/1",
+              "1:00 Clean & Press",
+              "1:27 Wide Deadrow",
+              "1:44 Triple Wide Deadrow",
+              "1:58 Recovery",
+              "2:12 Deadlift 3/1",
+              "2:39 Clean & Press",
+              "4:43 Outro - Wide Deadlift"
+            ],
             roundNotes: "Round 1 includes wide deadrow and triple wide deadrow before recovery; Round 2 repeats with triple wide finish.",
             roundTips: [
               "Cue “hands wide” on the last 2 counts before wide deadrow.",
@@ -127,6 +168,17 @@ const data = [
             weights: "2x light-medium plates + 1x medium plate",
             focus: "Dips + overhead + plate extensions",
             timing: "4/4, 2/2, combo 1/1 + 2/2",
+            musicCues: [
+              "0:05 Set up Tricep Dip",
+              "0:13 Dips 4/4",
+              "0:43 Combo 1",
+              "1:13 Transition to Seated O/H Extension",
+              "1:29 O/H Extension 2/2",
+              "3:06 Transition to Plate Extension",
+              "3:23 Plate Extension 2/2",
+              "4:26 Combo 1",
+              "4:56 Finish"
+            ],
             roundNotes: "Round 1 starts with dips; later rounds move to seated O/H then plate extensions.",
             roundTips: [
               "Use Round 1 to demo the combo (1/1 then 2/2).",
@@ -153,6 +205,16 @@ const data = [
             weights: "Light-medium barbell + light-medium plates",
             focus: "Tension + control with curls",
             timing: "4/4, 2/2, 3/1, combo 1/1/2",
+            musicCues: [
+              "0:07 Set up Plate Curl",
+              "0:12 Plate Curl 4/4",
+              "0:29 Combo 1",
+              "0:51 3/1 Plate Curl",
+              "1:35 Transition to Bar",
+              "1:40 Bar Curl 3/1",
+              "2:24 Transition to Plates",
+              "3:57 Repeat block 2"
+            ],
             roundNotes: "Round 1 is plates; Round 2 shifts to barbell; Round 3 returns to plates and repeats.",
             roundTips: [
               "Say “plates now, bar next” during the first combo.",
@@ -179,6 +241,14 @@ const data = [
             weights: "Medium-heavy plate (options: barbell/bodyweight)",
             focus: "Front rack stability + unilateral strength",
             timing: "2/2, 3/1, 1/1, 1/2/1, pulses",
+            musicCues: [
+              "0:05 Set up Front Rack L",
+              "0:19 Lunge L 2/2",
+              "1:02 Lunge L 1/1",
+              "1:16 Lunge L 1/2/1",
+              "1:59 Bottom pulses",
+              "2:27 Repeat block on R"
+            ],
             roundNotes: "Round 1 left side; Round 2 repeats the same block on right side.",
             roundTips: [
               "Call out the switch on the last 4 counts.",
@@ -205,6 +275,17 @@ const data = [
             weights: "Light-medium barbell + light plates",
             focus: "3D shoulder work + compound finish",
             timing: "4/4, 2/2, 1/1, 2/2/2/2",
+            musicCues: [
+              "0:05 Rear Fly set up",
+              "0:19 Rear Fly 4/4",
+              "0:46 Side Raise 2/2",
+              "1:00 Side Raise/Forward Press combo",
+              "1:41 Pushups 2/2",
+              "2:08 Repeat block 1",
+              "4:12 Transition to bar",
+              "4:25 Upright Row",
+              "5:20 O/H Press"
+            ],
             roundNotes: "Round 1 is plate work + pushups; Round 2 repeats, then transitions to barbell.",
             roundTips: [
               "Warn the barbell transition 8 counts early.",
@@ -233,6 +314,16 @@ const data = [
             weights: "Barbell + light/medium plates",
             focus: "Posterior chain + deep core",
             timing: "4/4, 2/2, triple pulse, 1/1/2",
+            musicCues: [
+              "0:05 Hip Bridge set up",
+              "0:12 Hip Bridge 4/4",
+              "1:13 Triple-pulse Hip Bridge",
+              "1:59 Transition to Hover",
+              "2:30 Rotating Side Hover L",
+              "3:00 Transition to Shootout",
+              "3:08 Shootout",
+              "3:46 Repeat block on R"
+            ],
             roundNotes: "Round 1 left-side hover; Round 2 repeats hover/side hover/shootout on right.",
             roundTips: [
               "Say “left now, right later” during the first hover.",
@@ -260,6 +351,20 @@ const data = [
             weights: "Bodyweight",
             focus: "Full-body stretch + recovery",
             timing: "2x8 and 4x8 holds",
+            musicCues: [
+              "0:05 Hip Flexor stretch",
+              "0:14 Hip Flexor + Tricep stretch R",
+              "0:32 Kneeling Hamstring L",
+              "1:00 Hip Flexor + Tricep stretch L",
+              "1:19 Kneeling Hamstring R",
+              "1:37 Down Dog",
+              "1:46 90/90 Glute stretch L",
+              "2:05 90/90 Glute stretch R",
+              "2:37 Standing Quad L",
+              "2:46 Standing Quad R",
+              "2:56 Upper Back stretch",
+              "3:05 Chest stretch"
+            ],
             sequence: [
               "Kneeling hip flexor + tricep stretch R then L",
               "Kneeling hamstring stretch L then R",
@@ -299,6 +404,15 @@ const data = [
             weights: "Bodyweight",
             focus: "Boxing basics + rhythm",
             timing: "7-punch combos + pulses",
+            musicCues: [
+              "0:05 Intro - L stance",
+              "0:09 Jab/Cross",
+              "0:31 7-punch + pulse",
+              "0:57 Hooks",
+              "1:09 Hooks + Jumping Jacks",
+              "1:35 Uppercuts + pulse",
+              "2:07 Repeat A-C on R"
+            ],
             roundNotes: "Left side first, then repeat the same sequences on right.",
             roundTips: [
               "Call the stance change on the last 2 counts.",
@@ -326,6 +440,16 @@ const data = [
             weights: "Bodyweight",
             focus: "Kicks + stance control",
             timing: "Slow, clear kicks + pulses",
+            musicCues: [
+              "4:01 Intro - Prepare Ginga",
+              "4:03 Half Ginga",
+              "4:16 Squat Pulse",
+              "4:30 Front Knee + Front Kick to corner",
+              "4:57 Side Kick",
+              "5:25 Roundhouse setup",
+              "5:38 Roundhouse kick",
+              "6:06 Repeat on R"
+            ],
             roundNotes: "Left corner first, then repeat the same sequences to the right.",
             roundTips: [
               "Cue the corner change early.",
@@ -354,6 +478,15 @@ const data = [
             weights: "Bodyweight",
             focus: "Kick-boxing + TKD speed",
             timing: "Uppercuts + hook/kick + front kicks",
+            musicCues: [
+              "0:00 Intro",
+              "0:06 Uppercuts + pulse",
+              "0:32 Uppercuts + Hook + Roundhouse",
+              "1:01 Front Kick + pulses",
+              "1:36 12 Front Kicks",
+              "1:48 Combo A2",
+              "2:20 Repeat on R"
+            ],
             roundNotes: "Left side sequences first, then repeat on right.",
             roundTips: [
               "Preview combo on the last 8 counts.",
@@ -380,6 +513,17 @@ const data = [
             weights: "Bodyweight",
             focus: "Boxing power + footwork",
             timing: "Run OTS + 6-punch combo + roll",
+            musicCues: [
+              "0:08 Run OTS",
+              "0:27 Jab/Cross",
+              "0:49 Add Hooks",
+              "1:11 Uppercuts + Jumping Jacks",
+              "1:58 Run OTS",
+              "2:17 Jab/Cross/Jab + Step",
+              "2:39 Power Hook",
+              "3:01 Continuous Jabs",
+              "3:48 Repeat on R"
+            ],
             roundNotes: "First half left lead, then repeat A–D on right.",
             roundTips: [
               "Call the roll on the step.",
@@ -407,6 +551,16 @@ const data = [
             weights: "Bodyweight",
             focus: "Knees + jump kicks + TKD finesse",
             timing: "Knee triples + step/jump kick + roundhouse knees",
+            musicCues: [
+              "0:00 Intro",
+              "0:12 3 Knees + Step Kick",
+              "0:37 Hop Knee + Jump Kick",
+              "1:05 Jab/Parry/Jab",
+              "1:17 Step Over Back Fist",
+              "1:51 Hop Knee + Jump Kick",
+              "2:28 Roundhouse Knees",
+              "2:53 Repeat on R"
+            ],
             roundNotes: "Left side sequence first, then repeat A–C on right.",
             roundTips: [
               "Call the corner change on the last 4 counts.",
@@ -434,6 +588,21 @@ const data = [
             weights: "Bodyweight (optional mat)",
             focus: "MMA conditioning + cardio spikes",
             timing: "Plank/squat blocks → pushups → strikes → sprawls",
+            musicCues: [
+              "0:01 Prep (plank/squat)",
+              "0:14 Extended Plank combo slow",
+              "0:52 Extended Plank combo fast",
+              "1:30 Pushups 4/4",
+              "1:55 Pushups 1/1",
+              "2:17 Pushup pulse",
+              "2:31 Run OTS",
+              "2:53 Jab/Cross/Uppercut L",
+              "3:15 Jab/Cross/Uppercut R",
+              "3:48 Decoy combo",
+              "3:59 Decoy + Sprawl",
+              "4:22 Sprawl to front",
+              "4:55 Repeat on R"
+            ],
             roundNotes: "Block 2 striking repeats left then right with decoys and sprawls.",
             roundTips: [
               "Call floor vs standing options clearly.",
@@ -461,6 +630,13 @@ const data = [
             weights: "Bodyweight",
             focus: "Capoeira flow + leg burn",
             timing: "Half ginga + esquiva + pulses",
+            musicCues: [
+              "0:07 Half Ginga + Esquiva R",
+              "0:51 Esquiva + Knee Lift",
+              "1:06 Squat Pulse + Lunge Pulse",
+              "1:35 Repeat A",
+              "2:12 Repeat on L"
+            ],
             roundNotes: "Right side first, then repeat A–C on left.",
             roundTips: [
               "Keep it on the spot and flow.",
@@ -488,6 +664,16 @@ const data = [
             weights: "Bodyweight",
             focus: "Elbows + knees rounds",
             timing: "Knees → elbows → descending elbows",
+            musicCues: [
+              "0:05 Knees",
+              "0:32 Running Knees",
+              "0:55 Horizontal Elbows",
+              "1:07 Elbows + Back/Hop Knee",
+              "1:36 Descending Elbows",
+              "2:28 Repeat B1",
+              "3:02 Repeat on R",
+              "5:30 Final Knees"
+            ],
             roundNotes: "Round patterns repeat on right after left.",
             roundTips: [
               "Call the elbow direction clearly.",
@@ -515,6 +701,16 @@ const data = [
             weights: "Bodyweight",
             focus: "Boxing power + running",
             timing: "Jab/cross combos + runs + jump jabs",
+            musicCues: [
+              "0:22 Run OTS",
+              "0:44 Jab/Cross",
+              "1:06 Double Jab + Uppercut",
+              "1:28 Uppercut hold",
+              "2:12 Power Jabs + Run",
+              "2:35 Jump Jabs + Run",
+              "2:57 Front stance jabs",
+              "3:41 Repeat on R"
+            ],
             roundNotes: "Left side sequences first, then repeat A–E on right.",
             roundTips: [
               "Use the run to reset the guard.",
@@ -543,6 +739,17 @@ const data = [
             weights: "Medicine ball optional",
             focus: "Core isolation + integration",
             timing: "Crunch/throw → leg drops → hover → climbers",
+            musicCues: [
+              "0:00 Transition to floor",
+              "0:08 Crunch + Med Ball Throw",
+              "0:35 Speed Leg Drops",
+              "1:01 Repeat A",
+              "1:54 Repeat A",
+              "2:47 Recover to Hover",
+              "2:55 Hover",
+              "3:13 Cross Mountain Climbers",
+              "Hold Plank"
+            ],
             roundNotes: "Three supersets, then hover + cross climbers finisher.",
             roundTips: [
               "Keep cues short; they’re on the floor.",
@@ -570,6 +777,18 @@ const data = [
             weights: "Bodyweight",
             focus: "Full-body stretch + recovery",
             timing: "Long holds + gentle transitions",
+            musicCues: [
+              "0:00 Hip Flexor + Shoulder/Triceps R",
+              "0:30 Hamstring L",
+              "0:50 Hip Flexor + Shoulder/Triceps L",
+              "1:20 Hamstring R",
+              "1:40 Transition to standing",
+              "1:49 Quad L",
+              "1:59 IT Band L",
+              "2:09 Quad R",
+              "2:19 IT Band R",
+              "2:29 Celebrate"
+            ],
             sequence: [
               "Kneeling hip flexor + shoulder/triceps stretch R",
               "Kneeling hamstring stretch L",
@@ -592,8 +811,6 @@ const data = [
 
 const programSelect = document.getElementById("programSelect");
 const releaseSelect = document.getElementById("releaseSelect");
-const countToggle = document.getElementById("countToggle");
-const simpleToggle = document.getElementById("simpleToggle");
 const trackGrid = document.getElementById("trackGrid");
 const releaseSummary = document.getElementById("releaseSummary");
 const printButton = document.getElementById("printButton");
@@ -664,6 +881,9 @@ const renderTracks = (release) => {
             <div class="track-song">
               Timing: <span class="count" data-count>${track.timing}</span>
             </div>
+            <button class="toggle-hint" type="button" aria-expanded="false">
+              Expand
+            </button>
           </div>
         </summary>
         <div class="track-body">
@@ -747,11 +967,12 @@ const renderTracks = (release) => {
                       return cleaned;
                     };
                     const counts = rawMatches.map(formatCount).join(", ");
+                    const fallback = track.timing ? `Timing: ${track.timing}` : "—";
                     return `
                       <tr>
                         <td>${index + 1}</td>
                         <td>${item}</td>
-                        <td><span class="count-pill">${counts || "—"}</span></td>
+                        <td><span class="count-pill">${counts || fallback}</span></td>
                       </tr>
                     `;
                   })
@@ -793,20 +1014,24 @@ const renderTracks = (release) => {
       );
     });
 
+    const details = card.querySelector("details");
+    const toggleHint = card.querySelector(".toggle-hint");
+    const syncToggleHint = () => {
+      const isOpen = details.open;
+      toggleHint.textContent = isOpen ? "Collapse" : "Expand";
+      toggleHint.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    };
+    details.addEventListener("toggle", syncToggleHint);
+    toggleHint.addEventListener("click", (event) => {
+      event.preventDefault();
+      details.open = !details.open;
+      syncToggleHint();
+    });
+    syncToggleHint();
+
     trackGrid.appendChild(card);
   });
 
-  updateCountVisibility();
-};
-
-const updateCountVisibility = () => {
-  document.querySelectorAll("[data-count]").forEach((item) => {
-    item.style.display = countToggle.checked ? "block" : "none";
-  });
-};
-
-const updateSimpleMode = () => {
-  document.body.classList.toggle("simple-mode", simpleToggle.checked);
 };
 
 const setAllDetails = (isOpen) => {
@@ -833,8 +1058,6 @@ programSelect.addEventListener("change", () => {
 });
 
 releaseSelect.addEventListener("change", refreshRelease);
-countToggle.addEventListener("change", updateCountVisibility);
-simpleToggle.addEventListener("change", updateSimpleMode);
 printButton.addEventListener("click", () => window.print());
 expandAllButton.addEventListener("click", () => setAllDetails(true));
 collapseAllButton.addEventListener("click", () => setAllDetails(false));
@@ -842,4 +1065,3 @@ collapseAllButton.addEventListener("click", () => setAllDetails(false));
 populateSelect(programSelect, data);
 populateSelect(releaseSelect, data[0].releases);
 refreshRelease();
-updateSimpleMode();

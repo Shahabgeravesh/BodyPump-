@@ -7,6 +7,7 @@ body {
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   color: #1a1b1f;
   background: #ffffff;
+  line-height: 1.5;
 }
 
 .container {
@@ -147,9 +148,6 @@ button.ghost {
   font-size: 0.95rem;
 }
 
-.simple-mode .tips-card {
-  display: none;
-}
 
 .summary-card h2 {
   margin-top: 0;
@@ -197,6 +195,7 @@ button.ghost {
 .track-summary {
   display: grid;
   gap: 6px;
+  position: relative;
 }
 
 .track-title {
@@ -222,6 +221,23 @@ button.ghost {
   font-size: 0.92rem;
   color: #1d2939;
   font-weight: 600;
+}
+
+.toggle-hint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.toggle-hint:hover {
+  background: #f9fafb;
 }
 
 .track-body {
@@ -264,6 +280,7 @@ button.ghost {
   padding: 10px 12px;
   border-top: 1px solid #e6eaf4;
   vertical-align: top;
+  word-break: break-word;
 }
 
 .sequence-map table {
@@ -410,15 +427,6 @@ button.ghost {
   margin-top: 4px;
 }
 
-.simple-mode .round-table,
-.simple-mode .coaching-cues,
-.simple-mode .notes {
-  display: none;
-}
-
-.simple-mode .sequence-map tbody tr:nth-child(n + 4) {
-  display: none;
-}
 
 .notes textarea {
   min-height: 80px;
@@ -443,6 +451,20 @@ button.ghost {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: min(980px, 92vw);
+  }
+
+  .controls {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .track-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -470,7 +492,81 @@ button.ghost {
     font-size: 0.88rem;
   }
 
+  .track-table {
+    overflow-x: visible;
+  }
+
   .track-table table {
-    min-width: 520px;
+    min-width: 0;
+  }
+
+  .track-table thead {
+    display: none;
+  }
+
+  .track-table tbody,
+  .track-table tr,
+  .track-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .track-table tr {
+    padding: 10px 10px;
+    border-top: 1px solid #e6eaf4;
+  }
+
+  .track-table td {
+    border-top: none;
+    padding: 4px 0;
+  }
+
+  .track-table td:first-child {
+    font-weight: 700;
+    color: #667085;
+  }
+
+  .sequence-map td:nth-child(2)::before {
+    content: "Move: ";
+    font-weight: 600;
+    color: #667085;
+    margin-right: 6px;
+  }
+
+  .sequence-map td:nth-child(3)::before {
+    content: "Counts: ";
+    font-weight: 600;
+    color: #667085;
+    margin-right: 6px;
+  }
+
+  .toggle-hint {
+    top: 6px;
+    right: 6px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 36px 0 28px;
+  }
+
+  .subtitle {
+    font-size: 0.98rem;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .track-card summary {
+    padding: 12px 12px;
+  }
+
+  .track-body {
+    padding: 0 12px 12px;
   }
 }
